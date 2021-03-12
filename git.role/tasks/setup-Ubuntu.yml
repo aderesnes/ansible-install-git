@@ -1,0 +1,8 @@
+---
+- name:  Update cache
+  apt:
+    update_cache: true
+- name: Check if all packages are installed
+  apt:
+    name: "{{ git_packages }}"
+    state: present
